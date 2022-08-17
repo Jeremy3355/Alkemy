@@ -90,8 +90,17 @@ Dentro declararemos las siguenetes varaibles (los nombres deben ser los que se e
 * `pathData`: ruta donde se encuentra guardado el proyecto, especificamente la carpeta creada en la seccion de `Setup del proyecto`.
 
 Ej: `Los ´*´ representan la informacion a completar`
-
-<img src=imagenes\env_ejemplo.png>
+```
+pgusuario= *
+pgcontrasenia= *
+pghost= *
+pgpuerto= *
+pgdb= *
+url_museos= *
+url_cines= *
+url_bibliotecas= *
+pathData= *
+```
 
 
 
