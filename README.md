@@ -13,6 +13,13 @@ Ej:
 ```
 C:\Usuarios\Usuario\>cd Escritorio
 ```
+* Creamos el envorno virtual con el siguente comando:
+```
+C:\Usuarios\Usuario\Escritorio\>python -m venv nombre_del_entorno
+```
+En el campo `nombre_del_entorno` se colocal en nombre que va a tener la carpeta del entorno virtual
 
+Por el momento no es necesario activar el enorno virtual.
 
 ### Creacion de la base de datos
+Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir a la sigeunte pagina https://www.postgresql.org/download/
