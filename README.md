@@ -3,7 +3,7 @@
 ## Descripcion
 Alkemy callenge analisis de datos: el proyecto consiste en la obtencion de informacion, procesamiento y carga a un servidor postgresql
 
-## Proyecto
+## Requisistos previos
 Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, la caul se encuentra preinstalada en python, y crear una base de datos con `postgresql`.
 
 ### Generacion del entorno virtual
@@ -35,5 +35,34 @@ Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir 
 
 * Usando el instalador procedemos con la instalacion del programa. Durant el proceso, nos pedira crear una contraseña por seuridad de la base de datos.
 
-### Setup del proyecto
+## Setup del proyecto
+
+### Instalacion de librerias
+El proyecto utiliza las sigeunte librerias:
+* `sqlalchemy`
+* `sqlalchemy_utils`
+* `psycopg2`
+* `pandas`
+* `python-decouple`
+* `requests`
+* `os`
+* `glob`
+* `sys`
+* `logging`
+
+De las cuales `requests`, `os`, `glob`, `sys` y `logging` son nativas de python.
+
+Para proceder con la insatalacion de las librerias, iniciaremos el entorno virtual previamente creado de la siguente forma:
+* En el cmd buscaremos la carpeta donde previmente creamos el entorno virtual haceindo uso del comando `cd`.
+* Una vez encntrada la carpeta, entraremos en ella y a su vez en la carpeta `Script`.
+* Dentro de `Script` ejecutaremos el archivo `activar.bat`. De la misma manera que para ver los ficheros dentro de un directorio, podemos usarlo para navegar entre los archivos que se encuentran en el.
+Ej:
+```
+C:\Usuarios\Usuario\Escritorio\nombre_del_entorno\Script\>activar.bat
+```
+De esta manera se nos ejecutara el cmd con el entorno virtual del python. Nos aparecera esto:
+```
+(nombre_del_entorno) C:\Usuarios\Usuario\Escritorio\nombre_del_entorno\Script\>
+```
+
 
