@@ -71,5 +71,5 @@ pip install `nombre de la libreria`
 Debemos repetir este comando para cada libreria que no sea nativa de python
 
 ### Configuracion de variables sensibles
-
+La informacion sensible como las claves de conexion a la base de datos seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
 
