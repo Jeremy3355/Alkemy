@@ -68,5 +68,8 @@ Una vez iniciado, instalaremos las librerias con el siguente comando:
 ```
 pip install `nombre de la libreria`
 ```
+Debemos repetir este comando para cada libreria que no sea nativa de python
+
+### Configuracion de variables sensibles
 
 
