@@ -90,6 +90,7 @@ Dentro declararemos las siguenetes varaibles (los nombres deben ser los que se e
 * `pathData`: ruta donde se encuentra guardado el proyecto, especificamente la carpeta creada en la seccion de `Setup del proyecto`.
 
 Ej:
+
 <img src=imagenes\env_ejemplo.png>
 
 
