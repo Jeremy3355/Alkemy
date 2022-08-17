@@ -89,7 +89,7 @@ Dentro declararemos las siguenetes varaibles (los nombres deben ser los que se e
 * `url_bibliotecas`: https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv. URL del dataset de las bibliotecas
 * `pathData`: ruta donde se encuentra guardado el proyecto, especificamente la carpeta creada en la seccion de `Setup del proyecto`.
 
-Ej:
+Ej: `Los ´*´ representan la informacion a completar`
 
 <img src=imagenes\env_ejemplo.png>
 
