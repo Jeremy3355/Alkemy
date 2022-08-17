@@ -70,6 +70,9 @@ pip install `nombre de la libreria`
 ```
 Debemos repetir este comando para cada libreria que no sea nativa de python
 
-### Configuracion de variables sensibles
+### Setup del proyecto
+Descargaremos los archivo `creacion_de_tablas.sql` y la carpeta `src`
+
+### Configuracion de informacion sensibles
 La informacion sensible como las claves de conexion a la base de datos seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
 
