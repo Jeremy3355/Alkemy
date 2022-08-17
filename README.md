@@ -23,3 +23,6 @@ Por el momento no es necesario activar el enorno virtual.
 
 ### Creacion de la base de datos
 Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir a la sigeunte pagina https://www.postgresql.org/download/
+
+* Al entrar al link no encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
+![]()
