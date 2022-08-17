@@ -25,8 +25,11 @@ Por el momento no es necesario activar el enorno virtual.
 Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir a la sigeunte pagina https://www.postgresql.org/download/
 
 * Al entrar al link no encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
-<img src=imagenes\pg_descarga_1.png>;
+<img src=imagenes\pg_descarga_1.png>
+
 * Luego de seleccionar el sistema operativo, haremos clik en `Download installer`.
-<img src=imagenes\pg_descarga_2.png>;
+<img src=imagenes\pg_descarga_2.png>
+
 * Elegimos la veersion que mejor se ajuste a nuestro sistema. A modo de recomendacion, lo mejor es no usar la ultima version.
-<img src=imagenes\pg_descarga_3.png>;
+<img src=imagenes\pg_descarga_3.png>
+
