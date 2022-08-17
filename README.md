@@ -71,8 +71,9 @@ pip install `nombre de la libreria`
 Debemos repetir este comando para cada libreria que no sea nativa de python
 
 ### Setup del proyecto
-Descargaremos los archivo `creacion_de_tablas.sql` y la carpeta `src`
+Descargaremos le archivo `creacion_de_tablas.sql` y la carpeta `src` y los guardaremos en una carpeta dentro del entorno virtual para tener una mejor organizacion.
 
 ### Configuracion de informacion sensibles
 La informacion sensible como las claves de conexion a la base de datos seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
+
 
