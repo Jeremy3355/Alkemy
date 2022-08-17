@@ -71,9 +71,26 @@ pip install `nombre de la libreria`
 Debemos repetir este comando para cada libreria que no sea nativa de python
 
 ### Setup del proyecto
-Descargaremos le archivo `creacion_de_tablas.sql` y la carpeta `src` y los guardaremos en una carpeta dentro del entorno virtual para tener una mejor organizacion.
+Descargaremos le archivo `creacion_de_tablas.sql` y la carpeta `src` y los guardaremos en una nueva carpeta (el nombre es indiferente) dentro del entorno virtual para tener una mejor organizacion.
 
 ### Configuracion de informacion sensibles
 La informacion sensible como las claves de conexion a la base de datos seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
+
+Dentro de la carpeta donde se encuentra `creacion_de_tablas.sql` y `src` crearemos un archivo `.env`. 
+
+Dentro declararemos las siguenetes varaibles (los nombres deben ser los que se especifican en el README debido que sino el programa no hara una correcrta lectura de las mismas):
+* `pgusuario`: usuario de postgresql
+* `pgcontrasenia`: contraseña de postgresql
+* `pghost`: host donde se esta ejecutando del servidor, en este caso seria `localhost`
+* `pgpuerto`: puerto donde se este ejecutando el servidor, por defecto suele ser `5432`
+* `pgdb`: nombre de la base de datos a utilzar. El mismo pude ser creado en postgresql o en el caso de no hacerlo, el programa `src.py` lo creara con el nombre definido en este campo.
+* `url_museos`: url del dataset de los museos
+* `url_cines`: url del dataset de los cines
+* `url_bibliotecas`: url del dataset de las bibliotecas
+* `pathData`: ruta donde se encuentra guardado el proyecto, especificamente la carpeta creada en la seccion de `Setup del proyecto`.
+
+Ej:
+<img src=imagenes\env_ejemplo.png>
+
 
 
