@@ -52,7 +52,7 @@ El proyecto utiliza las sigeunte librerias:
 
 De las cuales `requests`, `os`, `glob`, `sys` y `logging` son nativas de python.
 
-Para proceder con la insatalacion de las librerias, iniciaremos el entorno virtual previamente creado de la siguente forma:
+Para proceder con la insatalacion de las librerias, antes iniciaremos el entorno virtual previamente creado de la siguente forma:
 * En el cmd buscaremos la carpeta donde previmente creamos el entorno virtual haceindo uso del comando `cd`.
 * Una vez encntrada la carpeta, entraremos en ella y a su vez en la carpeta `Script`.
 * Dentro de `Script` ejecutaremos el archivo `activar.bat`. De la misma manera que para ver los ficheros dentro de un directorio, podemos usarlo para navegar entre los archivos que se encuentran en el.
@@ -63,6 +63,10 @@ C:\Usuarios\Usuario\Escritorio\nombre_del_entorno\Script\>activar.bat
 De esta manera se nos ejecutara el cmd con el entorno virtual del python. Nos aparecera esto:
 ```
 (nombre_del_entorno) C:\Usuarios\Usuario\Escritorio\nombre_del_entorno\Script\>
+```
+Una vez iniciado, instalaremos las librerias con el siguente comando:
+```
+pip install `nombre de la libreria`
 ```
 
 
