@@ -26,3 +26,7 @@ Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir 
 
 * Al entrar al link no encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
 <img src=imagenes\pg_descarga_1.png>
+* Luego de seleccionar el sistema operativo, haremos clik en `Download installer`.
+<img src=imagenes\pg_descarga_2.png>
+* Elegimos la veersion que mejor se ajuste a nuestro sistema. A modo de recomendacion, lo mejor es no usar la ultima version.
+<img src=imagenes\pg_descarga_3.png>
