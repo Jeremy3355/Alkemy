@@ -106,11 +106,27 @@ config = AutoConfig(search_path='*')
 ```
 A modo de recomendacion, es bueno colocar en los paths una barra extra para que no haya errores al ejecutar el programa
 
-### Cracion de base de dartos
+### Cracion de base de datos
 Este paso no es estrictamente necesario hacero, debido a que el propio programa en el caso de no encontrar una bases de datos con el nombre especificado, se encargara de crearla previamente a seguir ejecuando el resto del programa.
 
+* Ejecutamos pgAdmin 4
+<img src=imagnes\pgadmin_1.png>
 
+* Ingresamos la conrtaseña
+<img src=imagenes\pgadmin_2.png>
 
+* Desplegmaos el menu de `Servers`
+<img src=imagenes\pgadmin_3.png>
+
+* Desplegamos el menu de `PostgreSQL 13`
+<img src=imagenes\pgadmin_4.png>
+
+* Nos pedira ingresar la contraseña
+* Damos clik drecho sobre `Database` -> `Create` -> `Database`
+<img src=imagenes\pgadmin_5.png>
+
+* En el campo `Database` colocamos el nombre
+<img src=imagenes\pgadmin_6.png>
 
 
 
