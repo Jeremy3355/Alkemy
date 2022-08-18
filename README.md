@@ -83,9 +83,12 @@ Dentro declararemos las siguenetes varaibles (los nombres deben ser los que se e
 * `pghost`: host donde se esta ejecutando del servidor, en este caso seria `localhost`
 * `pgpuerto`: puerto donde se este ejecutando el servidor, por defecto suele ser `5432`
 * `pgdb`: nombre de la base de datos a utilzar. El mismo pude ser creado en postgresql o en el caso de no hacerlo, el programa `src.py` lo creara con el nombre definido en este campo.
-* `url_museos`: https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museos_datosabiertos.csv. URL del dataset de los museos. 
-* `url_cines`: https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv. URL del dataset de los cines
-* `url_bibliotecas`: https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv. URL del dataset de las bibliotecas
+* `url_museos`: URL del dataset de los museos.
+https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/4207def0-2ff7-41d5-9095-d42ae8207a5d/download/museos_datosabiertos.csv
+* `url_cines`: URL del dataset de los cines.
+https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/392ce1a8-ef11-4776-b280-6f1c7fae16ae/download/cine.csv
+* `url_bibliotecas`: URL del dataset de las bibliotecas.
+https://datos.cultura.gob.ar/dataset/37305de4-3cce-4d4b-9d9a-fec3ca61d09f/resource/01c6c048-dbeb-44e0-8efa-6944f73715d7/download/biblioteca_popular.csv
 * `pathData`: ruta donde se encuentra guardado el proyecto, especificamente la carpeta creada en la seccion de `Setup del proyecto`.
 
 Ej: `Los ´*´ representan la informacion a completar`
