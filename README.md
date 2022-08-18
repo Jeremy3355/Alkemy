@@ -35,8 +35,6 @@ Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir 
 
 * Usando el instalador procedemos con la instalacion del programa. Durant el proceso, nos pedira crear una contraseña por seuridad de la base de datos.
 
-## Setup del proyecto
-
 ### Instalacion de librerias
 El proyecto utiliza las sigeunte librerias:
 * `sqlalchemy`
