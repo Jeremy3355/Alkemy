@@ -4,11 +4,12 @@
 Alkemy callenge analisis de datos: el proyecto consiste en la obtencion de informacion, procesamiento y carga de la misma a un servidor postgresql
 
 ## Requisistos previos
-Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, la caul se encuentra preinstalada en python, y crear una base de datos con `postgresql`.
+Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, la caul se encuentra preinstalada en python, e instala `postgresql`.
 
 ### Generacion del entorno virtual
 * Abrir el cmd
 * Buscar la localizacion donde queremos crear el entorno virtual. Para ello navegaremos con el comando `cd`. Con el tab podemos ver los ficheros que se encuentran en ese directorio.
+
 Ej:
 ```
 C:\Usuarios\Usuario\>cd Escritorio
@@ -21,7 +22,7 @@ En el campo `nombre_del_entorno` se colocal en nombre que va a tener la carpeta 
 
 Por el momento no es necesario activar el enorno virtual.
 
-### Creacion de la base de datos
+### Instalacion de postgresql
 Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir a la sigeunte pagina https://www.postgresql.org/download/
 
 * Al entrar al link no encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
@@ -99,6 +100,17 @@ url_cines= *
 url_bibliotecas= *
 pathData= *
 ```
+Hay una varaible que no se registrara dentro del archivo `.env` debido a que es la ruta de configuracion para la libreria que se encarga de leer las variables del archivo `.env`. La misma se enceuntra en la `linea 14` del archivo `src.py`. En el campo `search_path` hay que colocar la ruta donde se encuentra alacendao el archivo `.env`.
+```
+config = AutoConfig(search_path='*')
+```
+A modo de recomendacion, es bueno colocar en los paths una barra extra para que no haya errores al ejecutar el programa
+
+### Cracion de base de dartos
+Este paso no es estrictamente necesario hacero, debido a que el propio programa en el caso de no encontrar una bases de datos con el nombre especificado, se encargara de crearla previamente a seguir ejecuando el resto del programa.
+
+
+
 
 
 
