@@ -134,5 +134,6 @@ Este paso no es estrictamente necesario hacero, debido a que el propio programa 
 * En el campo `Database` colocamos el nombre
 <img src=imagenes\pgadmin_6.png>
 
+### Ejecucion del programa
 
 
