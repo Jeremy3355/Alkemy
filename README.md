@@ -144,4 +144,7 @@ Este paso no es estrictamente necesario hacero, debido a que el propio programa 
 Una vez finalizada la ejecucion del programa, veremos que tenemos nuevos ficheros creados en la carpeta del pryecto. Uno de ellos lleva el nombre `logs`, donde se encuentra el archivo que nos indicara si hubieron errores al ejecutarse el programa y en el caso de que no haberlos, la correcta ejecucio del mismo.
 
 ### Verificaion de ingesta
+Para tener certeza de que los datos fueron ingestados correctamente, vamos a revisar las tablas dentro de la base de datos. Para ello seguiremos los siguentes pasos:
+* Seguiremos los mismo pasos que en la seccion `Creacion de base de datos` hasta el paso 5.
+* Una vez dentro de de la base de datos
 
