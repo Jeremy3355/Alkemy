@@ -69,6 +69,8 @@ pip install `nombre de la libreria`
 ```
 Debemos repetir este comando para cada libreria que no sea nativa de python
 
+Para desactivar el entorno virtual simplemente debemos ir al mismo directorio en donde se enceuntra `activar.bat` y ejecutamos `desactivar.bat`
+
 ## Setup del proyecto
 Descargaremos le archivo `creacion_de_tablas.sql` y la carpeta `src` y los guardaremos en una nueva carpeta (el nombre es indiferente) dentro del entorno virtual para tener una mejor organizacion.
 
@@ -135,5 +137,11 @@ Este paso no es estrictamente necesario hacero, debido a que el propio programa 
 <img src=imagenes\pgadmin_6.png>
 
 ### Ejecucion del programa
+* Como primer paso debemos encender el entorno virtual, como previamente se indico.
+* Una vez dentro navegamos por los ficheros y abrimos la carpeta donde se encuentran los archivos que corespondientes al proyecto.
+* Entramos en la carpeta `src` y ejecutamos `src.py`
 
+Una vez finalizada la ejecucion del programa, veremos que tenemos nuevos ficheros creados en la carpeta del pryecto. Uno de ellos lleva el nombre `logs`, donde se encuentra el archivo que nos indicara si hubieron errores al ejecutarse el programa y en el caso de que no haberlos, la correcta ejecucio del mismo.
+
+### Verificaion de ingesta
 
