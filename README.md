@@ -146,5 +146,7 @@ Una vez finalizada la ejecucion del programa, veremos que tenemos nuevos fichero
 ### Verificaion de ingesta
 Para tener certeza de que los datos fueron ingestados correctamente, vamos a revisar las tablas dentro de la base de datos. Para ello seguiremos los siguentes pasos:
 * Seguiremos los mismo pasos que en la seccion `Creacion de base de datos` hasta el paso 5.
+<img src=imagenes\verificacion_1.png>
+
 * Una vez dentro de de la base de datos
 
