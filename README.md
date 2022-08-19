@@ -148,5 +148,17 @@ Para tener certeza de que los datos fueron ingestados correctamente, vamos a rev
 * Seguiremos los mismo pasos que en la seccion `Creacion de base de datos` hasta el paso 5.
 <img src=imagenes\verificacion_1.png>
 
-* Una vez dentro de de la base de datos
+* Una vez dentro de `Database`, entraremos a la base de datos con el nombre que hayamos decidio.
+<img src=imagenes\verificacion_2.png>
 
+* Dentro, desplegaremos la seccion `Schemas`, que abrira automaticamente la seccion `public`
+<img src=imagenes\verificacion_3.png>
+
+* Nos dirigiremos a `Tablas`
+<img src=imagenes\verificacion_4.png>
+
+* Seleccionaremos una de las tablas y daremos clik derecho. Se nos desplegaran una serie de opciones de las cuales seleccionaremos las sigeuntes `View/Edit Data` -> `All Rows`.
+<img src=imagenes\verificacion_5.png>
+
+* De este modo podremos ver todos los datos de la tabla seleccionada.
+<img src=imagenes\verificacion_6.png>
