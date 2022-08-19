@@ -11,7 +11,7 @@ from sqlalchemy_utils import database_exists, create_database
 from decouple import AutoConfig
 
 # Configuracion decouple
-config = AutoConfig(search_path='D:\Escritorio\proyecto\proyecto_recoleccion_de_datos')
+config = AutoConfig(search_path='*')
 
 # Se definen parametros basicos que se van a utilizar a lo largo de todo el codigo
 sql_sentenicias = 'creacion_de_tablas.sql'
@@ -44,7 +44,20 @@ def test_conexiones():
         logging.error('Error en la conexion con ' + url)
         error = 1
     if error == 1: sys.exit()
-
+    """
+    # Conexion con base de datos #
+    try:
+        genera un llamado a la base de datos
+    except:
+        caso de no logar la conexion, activa el flag de error y avisa a traves de un logg lo ocurrido
+    # Conexion con URLs #
+    try:
+        revisa que los URLs no den error 404, en el caso de dar error 404 sale del for
+    except:
+        al dar error 404 activa el flag de error y avisa a traves de un logg que el URL fallo
+    if error  == 1: 
+        si se activo el flag de error, se frena la ejecucion del programa
+    """
 # Creacion de enlace con la base de datos
 def get_engine(usuario, contraseña, host, puerto, db):
     url = f"postgresql://{usuario}:{contraseña}@{host}:{puerto}/{db}"
@@ -56,10 +69,10 @@ def get_engine(usuario, contraseña, host, puerto, db):
 
 # Creaion de ficheros a utilizar
 def path_create():
-    if not os.path.isdir(config('pathData') + "/datasets"):
-        os.makedirs(config('pathData') + "datasets")
-    if not os.path.isdir(config('pathData') + "logs"):
-        os.makedirs(config('pathData') + "logs")
+    if not os.path.isdir(config('pathData') + "//datasets"):
+        os.makedirs(config('pathData') + "//datasets")
+    if not os.path.isdir(config('pathData') + "//logs"):
+        os.makedirs(config('pathData') + "//logs")
 
 # Descarga los .csv de los URLs y los organiza en un sistema de carpetas anidados por año-mes
 def get_csv(url):
@@ -80,16 +93,18 @@ def get_csv(url):
         cat = 'bibliotecasPopulares'
         nom = 'bibliotecas'
     else: return logging.error('Archivo no valido') 
-    if not os.path.isdir(config('pathData') + f"datasets/{cat}/{pathMes}"):
-        os.makedirs(config('pathData') + f"datasets/{cat}/{pathMes}")
+    if not os.path.isdir(config('pathData') + f"//datasets//{cat}//{pathMes}"):
+        os.makedirs(config('pathData') + f"//datasets//{cat}//{pathMes}")
     if 'text/csv' in content_type.lower():
-        with open(config('pathData') + f'datasets/{cat}/{pathMes}/{nom}-{fecha}.csv', 'wb') as dir:
+        with open(config('pathData') + f'//datasets//{cat}//{pathMes}//{nom}-{fecha}.csv', 'wb') as dir:
             dir.write(archivo.content)
-    else: logging.error('El archivo no es un dataset')
+    else: 
+        logging.error('El archivo no es un dataset')
+        sys.exit()
 
 # Lee los .csv del disco local 
 def leer_csv(cat):
-    recent_file = sorted(glob.iglob(config('pathData') + f'datasets/{cat}/*/*'),
+    recent_file = sorted(glob.iglob(config('pathData') + f'//datasets//{cat}//*//*'),
                          key = os.path.getctime, reverse = True)
     df = pd.read_csv(recent_file[0])
     return df
@@ -99,11 +114,12 @@ def crear_tablas(archivo, engine):
     conexion = engine.raw_connection()
     cursor = conexion.cursor()
     try:
-        with open(config('pathData') + archivo, 'r') as sentencias:
+        with open(config('pathData') + '//' + archivo, 'r') as sentencias:
             query = sentencias.read()
             cursor.execute(query)
     except:
         logging.error('Error al intentar crear tablas')
+        cursor.close()
         sys.exit()
     finally:
         conexion.commit()
@@ -126,7 +142,7 @@ def ingesta(df, tabla, engine):
 path_create()
 
 # Configuracion del logging
-logging.basicConfig(filename = config('pathData') + 'logs\log.log',
+logging.basicConfig(filename = config('pathData') + '\\logs\\log.log',
                     level = logging.INFO,
                     format = '%(asctime)s - %(levelname)s: %(message)s')
 
