@@ -169,4 +169,4 @@ En el challenge se pide crear una tabla con la siguente informacion:
 * Cantidad de registros totales por fuente
 * Cantidad de registros por provincia y categoria
 
-Para evitar problemas de normalizacion, se creo una tabla por cada item.
+Para evitar problemas de normalizacion se creo una tabla por cada item.
