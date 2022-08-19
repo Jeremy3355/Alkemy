@@ -162,3 +162,11 @@ Para tener certeza de que los datos fueron ingestados correctamente, vamos a rev
 
 * De este modo podremos ver todos los datos de la tabla seleccionada.
 <img src=imagenes\verificacion_6.png>
+
+### Aclaraciones
+En el challenge se pide crear una tabla con la siguente informacion:
+* Cantidad de registros totales por categoria
+* Cantidad de registros totales por fuente
+* Cantidad de registros por provincia y categoria
+
+Para evitar problemas de normalizacion, se creo una tabla por cada item.
