@@ -49,15 +49,17 @@ def test_conexiones():
     try:
         genera un llamado a la base de datos
     except:
-        caso de no logar la conexion, activa el flag de error y avisa a traves de un logg lo ocurrido
+        caso de no logar la conexion, activa el flag de error y avisa a traves de un log lo ocurrido
+        
     # Conexion con URLs #
     try:
         revisa que los URLs no den error 404, en el caso de dar error 404 sale del for
     except:
-        al dar error 404 activa el flag de error y avisa a traves de un logg que el URL fallo
+        al dar error 404 activa el flag de error y avisa a traves de un log que el URL fallo
     if error  == 1: 
         si se activo el flag de error, se frena la ejecucion del programa
     """
+    
 # Creacion de enlace con la base de datos
 def get_engine(usuario, contraseña, host, puerto, db):
     url = f"postgresql://{usuario}:{contraseña}@{host}:{puerto}/{db}"
@@ -66,6 +68,14 @@ def get_engine(usuario, contraseña, host, puerto, db):
         logging.info('Base de datos creada correctamente')
     engine = create_engine(url, pool_size=50, echo=False)
     return engine
+    """
+    url = genera el URL de conexion con la base de datos con la informacion de conexion que se le brinda
+    if not database_exists(url):
+        revisa si la base de datos ingresada no existre. En el caso de que sea verdadero, se creara e 
+        informara a traves del log.
+    engina = genera la conexion con la base de datos tomando el url como referencia
+    return engine    
+    """
 
 # Creaion de ficheros a utilizar
 def path_create():
@@ -73,6 +83,12 @@ def path_create():
         os.makedirs(config('pathData') + "//datasets")
     if not os.path.isdir(config('pathData') + "//logs"):
         os.makedirs(config('pathData') + "//logs")
+    """
+    if not os.path.isdir(direccion)
+        revisa si la direccion no existe.
+        os.makedirs(direccion)
+        Crea la direccion si la sentencia if fue verdadera
+    """
 
 # Descarga los .csv de los URLs y los organiza en un sistema de carpetas anidados por año-mes
 def get_csv(url):
@@ -101,6 +117,25 @@ def get_csv(url):
     else: 
         logging.error('El archivo no es un dataset')
         sys.exit()
+    """
+    if 'museos_datosabiertos' in file_name:
+    elif 'cine' in file_name:
+    elif 'biblioteca_popular' in file_name:
+    revisa que a que categoria corresponde el archivo descargado.
+    
+    else: return 
+        devuelve un log de error
+       
+    if not os.path.isdir(direccion):
+        os.makedirs(direccion)
+    genera el anidado de carpetas para gurdar ordenadamente los archivos
+    
+    if 'text/csv' in content_type.lower():
+        with open(direccion_de_gurdado, 'wb') as dir:
+            dir.write(archivo.content)
+    revisa que el archivos sea del tipo text o csv y lo guarda en la direccion que se creo previamente con
+    el nombre generado especificamente para ese archivo.
+    """
 
 # Lee los .csv del disco local 
 def leer_csv(cat):
@@ -108,7 +143,9 @@ def leer_csv(cat):
                          key = os.path.getctime, reverse = True)
     df = pd.read_csv(recent_file[0])
     return df
-
+    """
+    
+    """
 # Crea las tablas a partir de queries guardadas en un .sql
 def crear_tablas(archivo, engine):
     conexion = engine.raw_connection()
