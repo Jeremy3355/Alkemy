@@ -70,11 +70,15 @@ def get_engine(usuario, contraseña, host, puerto, db):
     return engine
     """
     url = genera el URL de conexion con la base de datos con la informacion de conexion que se le brinda
+    
     if not database_exists(url):
         revisa si la base de datos ingresada no existre. En el caso de que sea verdadero, se creara e 
         informara a traves del log.
+        
     engina = genera la conexion con la base de datos tomando el url como referencia
-    return engine    
+    
+    return engine
+    devuelve el engine
     """
 
 # Creaion de ficheros a utilizar
@@ -144,8 +148,17 @@ def leer_csv(cat):
     df = pd.read_csv(recent_file[0])
     return df
     """
+    recent_file = sorted(glob.iglob(direccion),
+                         key = os.path.getctime, reverse = True)
+    dentro de la direccion otorgada, genera una lista con los nombres de los archivos ordenados por fecha de carga ascendente
     
+    df = pd.read_csv(recent_file[0])
+    lee el csv mas reciente y lo guarda en una variable local
+    
+    retun df
+    devuelve el csv
     """
+    
 # Crea las tablas a partir de queries guardadas en un .sql
 def crear_tablas(archivo, engine):
     conexion = engine.raw_connection()
@@ -161,7 +174,10 @@ def crear_tablas(archivo, engine):
     finally:
         conexion.commit()
         cursor.close()
-
+    """
+    
+    """
+    
 #  Ingesta los datos a la base de datos
 def ingesta(df, tabla, engine):
     conexion = engine.raw_connection()
