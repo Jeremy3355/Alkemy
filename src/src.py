@@ -139,6 +139,9 @@ def get_csv(url):
             dir.write(archivo.content)
     revisa que el archivos sea del tipo text o csv y lo guarda en la direccion que se creo previamente con
     el nombre generado especificamente para ese archivo.
+    
+    else:
+        en el caso de que sea falso, genera un log de error y frena la ejecucion del programa
     """
 
 # Lee los .csv del disco local 
@@ -175,7 +178,15 @@ def crear_tablas(archivo, engine):
         conexion.commit()
         cursor.close()
     """
-    
+    try:
+        with open(config('pathData') + '//' + archivo, 'r') as sentencias:
+            query = sentencias.read()
+            cursor.execute(query)
+        abre el archivo donde se encuentran las queries de creacion de tablas y las ejecuta en el cursor previamente creado.
+    except:
+        en el caso de que falle, se genera un log con el error, se cierra el cursor y frena la ejecucion del programa
+    finally:
+        genera un commit a la base de datos y cierra la coenxion
     """
     
 #  Ingesta los datos a la base de datos
@@ -190,7 +201,9 @@ def ingesta(df, tabla, engine):
         conexion.commit()
         cursor.close()
         logging.info(f'Datos ingestados correctamente en tabla: {tabla}')
-
+    """
+    
+    """
 # Test ficheros #
 path_create()
 
