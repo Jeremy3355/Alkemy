@@ -4,7 +4,7 @@
 Alkemy callenge analisis de datos: el proyecto consiste en la obtencion de informacion, procesamiento y carga de la misma a un servidor postgresql
 
 ## Requisistos previos
-Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, caul se encuentra preinstalada en python, e instalar `postgresql`.
+Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, cual se encuentra preinstalada en python, e instalar `postgresql`.
 
 ### Generacion del entorno virtual
 * Abrir el cmd
