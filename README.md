@@ -4,7 +4,7 @@
 Alkemy callenge analisis de datos: el proyecto consiste en la obtencion de informacion, procesamiento y carga de la misma a un servidor postgresql
 
 ## Requisistos previos
-Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, la caul se encuentra preinstalada en python, e instala `postgresql`.
+Previo a la ejecucion del archivo `.py` debemos crear una un enotorno virtual de python con la libreria `venv`, caul se encuentra preinstalada en python, e instalar `postgresql`.
 
 ### Generacion del entorno virtual
 * Abrir el cmd
@@ -25,7 +25,7 @@ Por el momento no es necesario activar el enorno virtual.
 ### Instalacion de postgresql
 Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir a la sigeunte pagina https://www.postgresql.org/download/
 
-* Al entrar al link no encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
+* Al entrar al link nos encontraremos con la siguente pagina donde seleccionaremos el sistema operativo que tengamos.
 <img src=imagenes\pg_descarga_1.png>
 
 * Luego de seleccionar el sistema operativo, haremos clik en `Download the installer`.
@@ -34,7 +34,7 @@ Como base de datos vamos a estar usando postgresql. Para su descarga vamos a ir 
 * Elegimos la veersion que mejor se ajuste a nuestro sistema. A modo de recomendacion, lo mejor es no usar la ultima version.
 <img src=imagenes\pg_descarga_3.png>
 
-* Usando el instalador procedemos con la instalacion del programa. Durant el proceso, nos pedira crear una contraseña por seuridad de la base de datos.
+* Usando el instalador procedemos con la instalacion del programa. Durante el proceso, nos pedira crear una contraseña por seguridad de la base de datos.
 
 ### Instalacion de librerias
 El proyecto utiliza las sigeunte librerias:
@@ -53,7 +53,7 @@ De las cuales `requests`, `os`, `glob`, `sys` y `logging` son nativas de python.
 
 Para proceder con la insatalacion de las librerias, antes iniciaremos el entorno virtual previamente creado de la siguente forma:
 * En el cmd buscaremos la carpeta donde previmente creamos el entorno virtual haceindo uso del comando `cd`.
-* Una vez encntrada la carpeta, entraremos en ella y a su vez en la carpeta `Script`.
+* Una vez encontrada la carpeta, entraremos en ella y a su vez en la carpeta `Script`.
 * Dentro de `Script` ejecutaremos el archivo `activar.bat`. De la misma manera que para ver los ficheros dentro de un directorio, podemos usarlo para navegar entre los archivos que se encuentran en el.
 Ej:
 ```
@@ -67,15 +67,15 @@ Una vez iniciado, instalaremos las librerias con el siguente comando:
 ```
 pip install `nombre de la libreria`
 ```
-Debemos repetir este comando para cada libreria que no sea nativa de python
+Debemos repetir este comando para cada libreria que no sea nativa de python.
 
-Para desactivar el entorno virtual simplemente debemos ir al mismo directorio en donde se enceuntra `activar.bat` y ejecutamos `desactivar.bat`
+Para desactivar el entorno virtual simplemente debemos ir al mismo directorio en donde se enceuntra `activar.bat` y ejecutamos `desactivar.bat`.
 
 ## Setup del proyecto
 Descargaremos le archivo `creacion_de_tablas.sql` y la carpeta `src` y los guardaremos en una nueva carpeta (el nombre es indiferente) dentro del entorno virtual para tener una mejor organizacion.
 
 ### Configuracion de informacion sensibles
-La informacion sensible como las claves de conexion a la base de datos seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
+La informacion sensible, como las claves de conexion a la base de datos, seran guardadas en un archivo `.env`. Tambien se gurdaran variables de configuracion para facilitar el deploy.
 
 Dentro de la carpeta donde se encuentra `creacion_de_tablas.sql` y `src` crearemos un archivo `.env`. 
 
@@ -108,11 +108,11 @@ url_cines= *
 url_bibliotecas= *
 pathData= *
 ```
-Hay una varaible que no se registrara dentro del archivo `.env` debido a que es la ruta de configuracion para la libreria que se encarga de leer las variables del archivo `.env`. La misma se enceuntra en la `linea 14` del archivo `src.py`. En el campo `search_path` hay que colocar la ruta donde se encuentra alacendao el archivo `.env`.
+Hay una varaible que no se registrara dentro del archivo `.env` debido a que es la ruta de configuracion para la libreria que se encarga de leer las variables del archivo `.env`. La misma se encuentra en la `linea 14` del archivo `src.py`. En el campo `search_path` hay que colocar la ruta donde se encuentra almacenado el archivo `.env`.
 ```
 config = AutoConfig(search_path='*')
 ```
-A modo de recomendacion, es bueno colocar en los paths una barra extra para que no haya errores al ejecutar el programa
+A modo de recomendacion, es bueno colocar en los paths una barra extra para que no haya errores al ejecutar el programa.
 
 ### Cracion de base de datos
 Este paso no es estrictamente necesario hacero, debido a que el propio programa en el caso de no encontrar una bases de datos con el nombre especificado, se encargara de crearla previamente a seguir ejecuando el resto del programa.
@@ -141,7 +141,7 @@ Este paso no es estrictamente necesario hacero, debido a que el propio programa 
 * Una vez dentro navegamos por los ficheros y abrimos la carpeta donde se encuentran los archivos que corespondientes al proyecto.
 * Entramos en la carpeta `src` y ejecutamos `src.py`
 
-Una vez finalizada la ejecucion del programa, veremos que tenemos nuevos ficheros creados en la carpeta del pryecto. Uno de ellos lleva el nombre `logs`, donde se encuentra el archivo que nos indicara si hubieron errores al ejecutarse el programa y en el caso de que no haberlos, la correcta ejecucio del mismo.
+Una vez finalizada la ejecucion del programa, veremos que tenemos nuevos ficheros creados en la carpeta del proyecto. Uno de ellos lleva el nombre `logs`, donde se encuentra el archivo que nos indicara si hubieron errores al ejecutarse el programa, de no hableros, la correcta ejecucio del mismo.
 
 ### Verificaion de ingesta
 Para tener certeza de que los datos fueron ingestados correctamente, vamos a revisar las tablas dentro de la base de datos. Para ello seguiremos los siguentes pasos:
