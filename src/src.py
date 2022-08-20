@@ -197,13 +197,27 @@ def ingesta(df, tabla, engine):
         df.to_sql(tabla , engine, if_exists = 'append', index = False)
     except:
         logging.error(f'Error al intar ingestar datos en tabla {tabla}')
+        cursor.close()
     finally:
         conexion.commit()
         cursor.close()
         logging.info(f'Datos ingestados correctamente en tabla: {tabla}')
     """
-    
+     try:
+        df.to_sql(tabla , engine, if_exists = 'append', index = False)
+        toma el dataframe de pandas, lo convierte en sentencias sql y lo sube a la base de datos
+        a traves del engine
+    except:
+        logging.error(f'Error al intar ingestar datos en tabla {tabla}')
+        cursor.close()
+        en el caso de haber un error, lo informa a traves del log y cierra el cursor
+    finally:
+        conexion.commit()
+        cursor.close()
+        logging.info(f'Datos ingestados correctamente en tabla: {tabla}')
+        genera un commit en la base de datos, cierra el cursor e informa que la tabla se ingesto correctamente
     """
+    
 # Test ficheros #
 path_create()
 
